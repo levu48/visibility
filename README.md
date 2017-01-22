@@ -1,4 +1,4 @@
-This is an app testing page visibility detection.
+This is a webapp testing webpage visibility detection.
 
 ## Installation
 
