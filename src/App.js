@@ -43,7 +43,7 @@ class App extends Component {
       this.setState({
         isVisible: !Visibility.hidden()
       });
-      console.log(">>> STATE", this.state);
+      console.log(">>> LISTENING, VISIBILITY STATE", this.state);
 
       if (this.state.isVisible) {
         this.startUpdate();
@@ -65,7 +65,7 @@ class App extends Component {
           quote: data.quote.Ask,
           time: Date()
         });
-        console.log(">>> DATA", data);
+        console.log(">>> STOCK QUOTE DATA FROM YAHOO:", data);
     });
   }
 
@@ -73,6 +73,16 @@ class App extends Component {
     return (
       <div>
           <h2>Test page visibility</h2>
+          <hr/>
+          <div style={{fontSize:14}}>
+              <p>This app sends out an asynchronous request to get Apple stock quote from Yahoo Financial
+               API every 5 seconds. The stock quote value might be unchanged, but notice the timestamp is 
+               changing every 5 seconds.</p>
+              <p>You can turn on/off page visibility test by click on the buttons.</p>
+              <p>Open "inspect" window to see console logs while testing the page visibility by clicking 
+              on different browser tabs to cover and uncover the visibility of the page.</p>
+          </div>
+          <hr/>
           <p className="App-intro" style={{textAlign: 'left'}}>
               APPL: <span style={{color: '#ff0000'}}>{this.state.quote}</span> USD<br/>
               <span style={{fontSize: 14}}>{this.state.time}</span><br/>
