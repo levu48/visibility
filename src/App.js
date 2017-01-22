@@ -1,9 +1,6 @@
 /* eslint-disable */
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 import {getStock} from './util/stock';
-import flux from 'fluxify';
 import Visibility from 'visibilityjs';
 
 const styles = {
@@ -83,7 +80,7 @@ class App extends Component {
               on different browser tabs to cover and uncover the visibility of the page.</p>
           </div>
           <hr/>
-          <p className="App-intro" style={{textAlign: 'left'}}>
+          <p style={{textAlign: 'left'}}>
               APPL: <span style={{color: '#ff0000'}}>{this.state.quote}</span> USD<br/>
               <span style={{fontSize: 14}}>{this.state.time}</span><br/>
       
